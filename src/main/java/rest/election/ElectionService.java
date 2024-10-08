@@ -1,18 +1,17 @@
 package tradearea.warehouse;
 
 import org.springframework.stereotype.Service;
-import tradearea.model.WarehouseData;
 
 @Service
-public class WarehouseService {
+public class ElectionService {
 	
 	public String getGreetings( String inModule ) {
         return "Greetings from " + inModule;
     }
 
-    public WarehouseData getWarehouseData( String inID ) {
+    public tradearea.model.ElectionData getElectionData(String inID ) {
     	
-    	WarehouseSimulation simulation = new WarehouseSimulation();
+    	tradearea.warehouse.ElectionSimulation simulation = new tradearea.warehouse.ElectionSimulation();
         return simulation.getData( inID );
         
     }
